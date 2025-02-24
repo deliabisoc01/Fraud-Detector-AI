@@ -1,0 +1,56 @@
+    body {
+        font-family: monospace, sans-serif;
+        margin: 2;
+        padding: 5;
+        background-color: #a8aab2;
+        /* Light background color for a subtle effect */
+    }
+    /* Container for the logo and arrows */
+    
+    .logo-arrows-container {
+        display: grid;
+        place-items: center;
+        padding-top: 4%;
+        /* Adjust as needed */
+    }
+    /* Styling for the logo */
+    
+    .logo-container {
+        display: grid;
+        place-items: center;
+    }
+    /* Styling for the logo image */
+    
+    .logo {
+        width: 210px;
+        animation: colorChange 3s infinite alternate;
+        position: absolute;
+        margin-top: 290px;
+        margin-right: 17px;
+    }
+    /* Styling for the arrows container */
+    
+    .arrows-container {
+        display: grid;
+        place-items: center;
+        margin-top: 190px;
+        /* Space between the logo and arrows */
+    }
+    /* Styling for the arrows image */
+    
+    .arrows {
+        width: 950px;
+        /* Adjust the size of the arrows image as needed */
+    }
+    
+    @keyframes colorChange {
+        0% {
+            filter: hue-rotate(0deg) brightness(1) contrast(1);
+        }
+        50% {
+            filter: hue-rotate(90deg) brightness(1.2) contrast(1.1);
+        }
+        100% {
+            filter: hue-rotate(240deg) brightness(1.5) contrast(1.2);
+        }
+    }

@@ -1,0 +1,297 @@
+/* Base Styles */
+
+body {
+    font-family: monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a8aab2;
+    /* Light background color for a subtle effect */
+}
+
+
+/* Container Styling */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+/* LOGO */
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    /* Adjust as needed */
+    right: 10px;
+    /* Adjust as needed */
+}
+
+.logo {
+    width: 100px;
+    /* Adjust the size as needed */
+    height: auto;
+    animation: colorChange 3s infinite alternate;
+    /* Animation to change colors */
+}
+
+
+/* INFO */
+
+.info-container {
+    position: absolute;
+    top: 10px;
+    /* Adjust as needed */
+    left: 10px;
+    /* Adjust as needed */
+}
+
+.info {
+    width: 25px;
+    /* Adjust the size as needed */
+    height: auto;
+    animation: colorChange 3s infinite alternate;
+    /* Animation to change colors */
+    transition: box-shadow 0.3s ease-in-out;
+    /* Smooth transition for the shadow change */
+}
+
+
+/* Hover effect to increase shadow intensity */
+
+.info:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+    /* Larger and more intense shadow */
+}
+
+
+/* Heading Styling */
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fef8ff;
+    font-size: 2.5em;
+    text-shadow: 0 0 1px #fef8ff, 0 0 1px #fef8ff;
+    /* Initial text outline */
+    animation: colorChange 3s infinite alternate, outlineColorChange 3s infinite alternate;
+}
+
+
+/* Keyframes for the outline color change animation */
+
+@keyframes outlineColorChange {
+    0% {
+        text-shadow: 0 0 1px #fef8ff, 0 0 2px #d027ff;
+    }
+    50% {
+        text-shadow: 0 0 1px #d1c4ff, 0 0 2px #9d75f2;
+    }
+    100% {
+        text-shadow: 0 0 1px #b19cd9, 0 0 2px #53e3cc;
+    }
+}
+
+
+/* Keyframes for the color change animation using filter */
+
+@keyframes colorChange {
+    0% {
+        filter: hue-rotate(0deg) brightness(1) contrast(1);
+    }
+    50% {
+        filter: hue-rotate(90deg) brightness(1.2) contrast(1.1);
+    }
+    100% {
+        filter: hue-rotate(240deg) brightness(1.5) contrast(1.2);
+    }
+}
+
+
+/* Top Row Styling */
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+/* Form and Evaluation Styling */
+
+.form-container,
+.evaluation-report {
+    width: 48%;
+    background-color: #f6f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #a50072;
+    /* Accent border */
+}
+
+
+/* Results Container Styling */
+
+.results-container {
+    width: 96%;
+    background-color: #f6f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    border-left: 5px solid #2f0885;
+    /* Accent border */
+}
+
+
+/* Form Elements Styling */
+
+form {
+    margin: 0 auto;
+}
+
+input[type="file"],
+select,
+button {
+    padding: 12px;
+    margin: 10px 0;
+    width: fit-content;
+    border: 1px solid #1b59ff;
+    border-radius: 5px;
+}
+
+
+/* Button Styling */
+
+button {
+    background-color: #28014d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #28014d
+    /* Darker shade on hover */
+}
+
+
+/* Subheadings Styling */
+
+h2 {
+    margin-bottom: 10px;
+    color: #28014d;
+}
+
+
+/* Table and Report Styling */
+
+.table-container,
+.evaluation-report pre {
+    text-align: left;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.evaluation-report pre {
+    background: #fef8ff;
+    color: #2f0885;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+/* Miscellaneous Styling */
+
+input[type="file"]:focus,
+select:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #6064fc;
+}
+
+.table-container {
+    background-color: #f6f8ff;
+    border: 1px solid #b090f8;
+    /* Light purple border */
+}
+
+
+/* Scrollbar Styling */
+
+.table-container::-webkit-scrollbar,
+.evaluation-report pre::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb,
+.evaluation-report pre::-webkit-scrollbar-thumb {
+    background-color: #6064fc;
+    border-radius: 10px;
+}
+
+
+/* Custom Hover Effects */
+
+.form-container:hover,
+.evaluation-report:hover,
+.results-container:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+
+/* Table Styling */
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Remove double borders */
+}
+
+.table-container th,
+.table-container td {
+    border: 1px solid #03073d;
+    /* Simplified border color */
+    padding: 10px;
+    text-align: left;
+}
+
+
+/* Table Header Styling */
+
+.table-container th {
+    background-color: #28014d;
+    /* Set background color for headers */
+    color: #e6e6ff;
+    position: sticky;
+    /* Make headers sticky */
+    top: 0;
+    /* Stick to the top */
+    z-index: 1;
+    /* Ensure headers are above other table content */
+}
+
+
+/* Table Container Styling */
+
+.table-container {
+    overflow-y: auto;
+    /* Enable vertical scroll if needed */
+    max-height: 400px;
+    /* Set a maximum height for the table */
+    border: 1px solid #a50072;
+    /* Set border color */
+    border-radius: 5px;
+    background-color: #fef8ff;
+    color: #2f0885;
+}
